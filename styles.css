@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: #0d0d0d;
+    color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#vhs-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 5rem;
+    color: #ff99cc;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.socials a {
+    color: #ff99cc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.socials a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.vhs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vhs-static {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    mix-blend-mode: screen;
+    animation: static-flicker 0.2s steps(2) infinite;
+}
+
+@keyframes static-flicker {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.05; }
+}
+
+.experiment-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.experiment-link a {
+    color: #ff99cc;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+}
+
+.experiment-link a:hover {
+    text-decoration: underline;
+}
